@@ -1,0 +1,1 @@
+<img src="https://nonexisting.url" onerror=window.open("https://www.owasp.org","xss",'height=500,width=500');>
