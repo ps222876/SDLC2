@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ibv81qcRKabY10KHMRIhZ5e2wCYkOwHQXWl8OmE9E9O7BBmV/vYqOU5hrcBSmk3C0CPO99o4kJeQNGB4MjIqlA==",
+  "success": true,
+  "projectFilePath": "C:\\School\\Leerjaar2\\SDLC\\SDLC2\\Week5\\Opdracht5a\\Inleveropdracht\\Inleveropdracht\\Inleveropdracht.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\khale\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
+    "C:\\Users\\khale\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\khale\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\khale\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\khale\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.31\\microsoft.netcore.app.host.win-x64.3.1.31.nupkg.sha512"
+  ],
+  "logs": []
+}

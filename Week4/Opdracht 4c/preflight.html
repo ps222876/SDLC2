@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Namen</h1>  
+    <label>Naam:</label><br/> 
+    <input type="text" name="naam" id="naam"><br/><br/>
+    <button onclick="voegToe()">Voeg Toe</button><br/>
+    <button onclick="Verander()">Verander</button><br/>
+    <button onclick="Verwijder()">Verwijder</button><br/>
+    <button onclick="Volgende()">Volgende</button><br/>
+    <button onclick="Vorige()">Vorige</button><br/>  
+</body>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+const api = "http://127.0.0.1:8000/api/namen/"
+
+
+let id = 0;
+
+const vullen = async () => {
+    console.log('request ',api+id)
+    const response = await fetch(api+id)
+    const json = await (response.json());
+    //console.log(json)
+    document.getElementById("naam").value = json.naam
+    id = json.id
+}
+vullen()
+
+const Volgende = async () => {
+    id++
+    vullen()
+}
+const Vorige = async () => {
+    id--
+    vullen()
+}
+
+const voegToe = async () => {
+			const naam     = document.querySelector("#naam").value
+			const jsonstring = {"naam":naam}
+			console.log("voeg toe: ",jsonstring)
+			const respons = await axios.post(api, jsonstring, {headers: {'Content-Type': 'application/json'}})
+			console.log('status code', respons.status)
+
+//    const data = new FormData();
+//    data.set( "naam", document.querySelector("#naam").value );
+//    await fetch(api, {method:'POST', body:data})
+}
+
+const Verander = async () => {
+    const jsonstring = {"naam":document.getElementById("naam").value}
+    await axios.patch(api+id, jsonstring, {headers: {'Content-Type': 'application/json'}})    
+}
+
+const Verwijder = async () => {
+    await axios.delete(api+id)
+    vullen()
+}
+
+</script>
+</html>
